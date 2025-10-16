@@ -1,8 +1,6 @@
 import Link from "next/link"
 
-import type { UUID } from "crypto"
-
-function Article({name, date, id}: {name: string, date: string, id: UUID}) {
+function Article({name, date, id}: {name: string, date: string, id: string}) {
     return (
         <div className="flex flex-col w-[80%] md:w-[273px] h-[372px] gap-2">
             <div className="bg-[#B5B5B5] w-full h-[270px] rounded-[12px] relative">
