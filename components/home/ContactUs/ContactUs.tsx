@@ -1,10 +1,3 @@
-import instagramIcon from '/icons/instagram.svg';
-import pintrestIcon from '/icons/pintrest.svg';
-import whatsupIcon from '/icons/whatsup.svg';
-import linkedinIcon from '/icons/linkedin.svg';
-import youtubeIcon from '/icons/youtube.svg';
-import telegramIcon from '/icons/telegram.svg';
-
 import Image from 'next/image';
 import { Mail, Phone } from "lucide-react"
 
@@ -22,12 +15,12 @@ function ContactUs() {
             <div className="flex flex-col gap-3 justify-between items-center">
                 <h2>شبکه های اجتماعی</h2>
                 <div className="grid grid-cols-3 grid-rows-2 items-center">
-                    <Image width={106} height={106} src="/icons/instagram.svg" alt="instagram" />
-                    <Image width={106} height={106} src="/icons/pintrest.svg" alt="pintrest" />
-                    <Image width={106} height={106} src="/icons/whatsup.svg" alt="whatsup" />   
-                    <Image width={106} height={106} src="/icons/linkedin.svg" alt="linkedin" />
-                    <Image width={106} height={106} src="/icons/youtube.svg" alt="youtube" />
-                    <Image width={106} height={106} src="/icons/telegram.svg" alt="telegram" />
+                    <Image width={106} height={106} src="/icons/instagram.png" alt="instagram" />
+                    <Image width={106} height={106} src="/icons/pintrest.png" alt="pintrest" />
+                    <Image width={106} height={106} src="/icons/whatsup.png" alt="whatsup" />
+                    <Image width={106} height={106} src="/icons/linkedin.png" alt="linkedin" />
+                    <Image width={106} height={106} src="/icons/youtube.png" alt="youtube" />
+                    <Image width={106} height={106} src="/icons/telegram.png" alt="telegram" />
                 </div>
             </div>
         </div>
