@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-alert: #ff715b;
+  --color-disable-text: #9e9ea7;
+
+  --color-text: #1e2229;
+  --color-accent: #fbbd23;
+  --color-background: #f9fafb;
+
+  /* PRIMARY */
+  --color-primary: #4b5563;
+  --color-primary-50: #fcfcfd;
+  --color-primary-100: #f3f4f6;
+  --color-primary-200: #e4e7eb;
+  --color-primary-300: #cfd4db;
+  --color-primary-400: #b4bcc6;
+  --color-primary-500: #939eae;
+  --color-primary-600: #6c7b90;
+  --color-primary-700: #4b5563;
+  --color-primary-800: #2d333c;
+  --color-primary-900: #1c2025;
+  --color-primary-950: #16191d;
+
+  /* SECONDARY */
+  --color-secondary: #b4a4cb;
+  --color-secondary-100: #f0ecf4;
+  --color-secondary-200: #e1daea;
+  --color-secondary-300: #d2c8df;
+  --color-secondary-400: #c3b6d5;
+  --color-secondary-500: #b4a4cb;
+  --color-secondary-600: #9083a2;
+  --color-secondary-700: #6c6279;
+  --color-secondary-800: #474151;
+  --color-secondary-900: #232028;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  p {
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: var(--font-weight-bold);
+  }
+  h2 {
+    font-size: 39px;
+    font-weight: var(--font-weight-medium);
+  }
+  h3 {
+    font-size: 31px;
+    font-weight: var(--font-weight-medium);
+  }
+  h4 {
+    font-size: 25px;
+    font-weight: var(--font-weight-medium);
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gradient-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 45px;
+  margin: auto;
+  position: relative;
+  color: #fff;
+  background: #c3c3c3;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: 50px;
+}
+.gradient-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, white, #4f4f4f);
+}
+
+#chat::-webkit-scrollbar {
+    display: none
 }
