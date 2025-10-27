@@ -1,0 +1,36 @@
+name: Deploy to Liara
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Install Liara CLI
+        run: npm install -g @liara/cli
+
+      - name: Deploy to Liara
+        run: liara deploy --app="pinext-front" --api-token="$LIARA_API_TOKEN"  --platform=next
+        env:
+          LIARA_API_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
