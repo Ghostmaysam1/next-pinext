@@ -35,7 +35,7 @@ export default function RootLayout({
         <div className="h-[250px] w-full flex flex-col items-center justify-between pb-10">
           <Image src="/logo-bottom.png" width={158} height={144} alt="" />
           <span className="block w-[80%] h-1 rounded-full bg-[#D3D3D3]"></span>
-          <p className="text-[#8A8A8A]">
+          <p className="text-[#8A8A8A] text-center w-[90%]">
             صاحب امتیاز تمامی حقوق وب سایت، متعلق به پینکست می‌باشد.
           </p>
         </div>

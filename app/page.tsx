@@ -22,7 +22,7 @@ export default function Home() {
 
       <span className="h-[20px] w-full block"></span>
       <QuoteBanner />
-      <span className="h-[130px] w-full block"></span>
+      <span className="h-[50px] md:h-[130px] w-full block"></span>
       <Services />
       <span className="h-[130px] w-full block"></span>
       <Portfolio />
