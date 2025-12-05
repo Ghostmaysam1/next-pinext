@@ -14,6 +14,8 @@ export type QuestionType = {
 
 function Screen() {
     const [qNow, setQNow] = useState<null | number>(null)
+    
+    const [waitingQueue, setWaitingQueue] = useState<0 | 1>(0);
 
     const questionList: QuestionType[] = [
         {id: 1, text: `چطور پنل ها رو مشاهده کنم`, answer: 'در بخش ارتباط با ما به اینستاگرام مراجعه کنید'},
@@ -29,8 +31,8 @@ function Screen() {
     return (
         <div className="p-0 lg:p-3  h-full bg-primary-200 flex gap-4">
             <div className="w-full flex flex-col justify-between">
-                <Chat question={qNow} questionList={questionList} />
-                <Questions onQuestion={onQuestionFire} questionList={questionList} />
+                <Chat question={qNow} questionList={questionList} setWaitingQueue={setWaitingQueue} />
+                <Questions onQuestion={onQuestionFire} questionList={questionList} waitingQueue={waitingQueue} />
                 <Input />
             </div>
         </div>
